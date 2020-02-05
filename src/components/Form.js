@@ -14,8 +14,9 @@ class Form extends React.Component{
                         FirstName: Yup.string(),
                         FirstNumber: Yup.number()
                     })}
-                    onSubmit={(values) => {    
+                    onSubmit={(values , {resetForm} ) => {    
                         console.log(values);
+                        resetForm({ values: ''});
                     }}>
                     {
                         formik => (
